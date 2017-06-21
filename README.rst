@@ -1,7 +1,7 @@
 Django LDAP authentication
 ==========================
 
-This application uses django-auth-ldap_. to authenticate against KDL's LDAP service. If the LDAP authentication fails it falls back to Django authentication, so it is possible to have local Django accounts.
+This application uses django-auth-ldap_ to authenticate against KDL's LDAP service. If the LDAP authentication fails it falls back to Django authentication, so it is possible to have local Django accounts.
 
 Configuration
 -------------
