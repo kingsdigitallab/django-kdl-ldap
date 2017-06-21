@@ -19,3 +19,5 @@ System requirements
 -------------------
 
 The python/django LDAP libraries depend on the ``libldap2-dev`` and ``libsasl2-dev`` systemlibraries.
+
+[django-auth-ldap]: http://pythonhosted.org/django-auth-ldap/
