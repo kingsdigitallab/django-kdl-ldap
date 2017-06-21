@@ -9,11 +9,11 @@ Configuration
 #. add ``kdl_ldap`` to ``INSTALLED_APPS``
 #. import the ``kdl_ldap`` settings into your project's settings ``from kdl_ldap.settings import *  # noqa``.
 #. Add the setting ``AUTH_LDAP_REQUIRE_GROUP`` to your project settings and set it to the LDAP group you want to authenticate to: ``AUTH_LDAP_REQUIRE_GROUP = 'cn=PROJECT_GROUP_NAME,' + LDAP_BASE_OU``.
-#. Add ``kdl_django`` signal handler into your project urls:
+#. Add ``kdl_ldap`` signal handler into your project urls:
 
-        from ddhldap.signal_handlers import register_signal_handlers as \
-            ddhldap_register_signal_hadlers
-        ddhldap_register_signal_handlers()
+        from kdl_ldap.signal_handlers import register_signal_handlers as \
+            kdl_ldap_register_signal_hadlers
+        kdl_ldap_register_signal_hadlers()
 
 System requirements
 -------------------
