@@ -1,7 +1,7 @@
 Django LDAP authentication
 ==========================
 
-This application uses [django-auth-ldap][] to authenticate against KDL's LDAP service. If the LDAP authentication fails it falls back to Django authentication, so it is possible to have local Django accounts.
+This application uses django-auth-ldap_. to authenticate against KDL's LDAP service. If the LDAP authentication fails it falls back to Django authentication, so it is possible to have local Django accounts.
 
 Configuration
 -------------
@@ -20,4 +20,4 @@ System requirements
 
 The python/django LDAP libraries depend on the ``libldap2-dev`` and ``libsasl2-dev`` systemlibraries.
 
-[django-auth-ldap]: http://pythonhosted.org/django-auth-ldap/
+.. _django-auth-ldap: http://pythonhosted.org/django-auth-ldap/
