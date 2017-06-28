@@ -19,7 +19,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='django-kdl-ldap',
 
-    version='1.0',
+    version='1.1',
 
     description='Django LDAP authentication for KDL',
     long_description=long_description,
