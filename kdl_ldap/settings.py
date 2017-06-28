@@ -35,14 +35,14 @@ AUTH_LDAP_USER_ATTR_MAP = {
 
 AUTH_LDAP_USER_FLAGS_BY_GROUP = {
     'is_active': 'cn=confluence-users,' + LDAP_BASE_OU,
-    'is_staff': 'cn=ddh-staff,' + LDAP_BASE_OU,
-    'is_superuser': 'cn=sysadmin,' + LDAP_BASE_OU
+    'is_staff': 'cn=kdl-staff,' + LDAP_BASE_OU,
+    'is_superuser': 'cn=kdl-staff,' + LDAP_BASE_OU
 }
 
 AUTH_LDAP_PROFILE_FLAGS_BY_GROUP = {}
 
 # This is the default, but I like to be explicit
-AUTH_LDAP_ALWAYS_UPDATE_USER = True
+AUTH_LDAP_ALWAYS_UPDATE_USER = False
 
 # Cache group memberships for an hour to minimize LDAP traffic
 AUTH_LDAP_CACHE_GROUPS = True
