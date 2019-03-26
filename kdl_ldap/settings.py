@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 import ldap
-from django_auth_ldap.config import LDAPSearch, PosixGroupType
+from django_auth_ldap.config import LDAPGroupQuery, LDAPSearch, PosixGroupType
 
 LDAP_BASE_DC = 'dc=dighum,dc=kcl,dc=ac,dc=uk'
 LDAP_BASE_OU = 'ou=groups,' + LDAP_BASE_DC
@@ -34,7 +34,11 @@ AUTH_LDAP_USER_ATTR_MAP = {
 }
 
 AUTH_LDAP_USER_FLAGS_BY_GROUP = {
-    'is_active': 'cn=confluence-users,' + LDAP_BASE_OU,
+    'is_active': LDAPGroupQuery('cn=kdl-staff,' + LDAP_BASE_OU)
+                 | LDAPGroupQuery('cn=ddh-staff,' + LDAP_BASE_OU)
+                 | LDAPGroupQuery('cn=kdl-external,' + LDAP_BASE_OU)
+                 | LDAPGroupQuery('cn=ddh-external,' + LDAP_BASE_OU)
+                 | LDAPGroupQuery('cn=systems,' + LDAP_BASE_OU),                 
     'is_staff': 'cn=kdl-staff,' + LDAP_BASE_OU,
     'is_superuser': 'cn=kdl-staff,' + LDAP_BASE_OU
 }
